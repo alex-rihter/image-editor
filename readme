@@ -1,0 +1,16 @@
+Picozu is an online drawing and photo retouching application based on HTML5 and
+CSS3. The application provides you with an easy yet complex way to edit your
+photos, draw using various brushes, filters, layers and explore a number of
+editing tools such as color fill, magic eraser or freehand selection.
+
+ClassyPicozu is a jQuery plugin written by Marius Stanciu - Sergiu, a plugin
+that allows you to use Picozu's advanced image editing functions on images
+from your own website. Basically you get an awesome online image editor your
+visitors can use to play with.
+
+@name ClassyPicozu
+@package jQuery plugin
+@author Marius Stanciu - Sergiu <marius@vox.space>
+@website https://vox.space/
+@version 1.0.2
+@license MIT https://vox.space/LICENSE-MIT

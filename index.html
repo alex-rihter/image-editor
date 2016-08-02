@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta charset="utf-8" />
+        <title>ClassyPicozu jQuery plugin | vox.SPACE</title>
+        <link rel="stylesheet" href="css/documentation.css" />
+        <link rel="stylesheet" href="css/jquery.classypicozu.min.css" />
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.classypicozu.min.js"></script>
+    </head>
+    <body>
+        <div id="page-container">
+            <div id="main-container">
+                <div id="page-content">
+                    <div class="content-header">
+                        <div class="header-section">
+                            <h1>ClassyPicozu<br><small>Image Editing for your website, via Picozu!</small></h1>
+                        </div>
+                    </div>
+                    <ul class="breadcrumb breadcrumb-top">
+                        <li><a href="https://vox.space/"><i class="fa fa-home"></i> vox.SPACE</a></li>
+                        <li><a href="https://vox.space/jquery/">jQuery plugins</a></li>
+                        <li>ClassyPicozu</li>
+                    </ul>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="block">
+                                <div class="block-title">
+                                    <h2>Introduction</h2>
+                                </div>
+                                <div class="clearfix">
+                                    <blockquote><a href="https://www.picozu.com">Picozu</a> is an online drawing and photo retouching application based on HTML5 and CSS3. The application provides you with an easy yet complex way to edit your photos, draw using various brushes, filters, layers and explore a number of editing tools such as color fill, magic eraser or freehand selection.</blockquote>
+                                    <p>ClassyPicozu is a <a href="http://www.jquery.com">jQuery</a> plugin written by <a href="https://vox.space">Marius Stanciu - Sergiu</a>, a plugin that allows you to use Picozu's advanced image editing functions on images from your own website. Basically you get an awesome online image editor your visitors can use to play with.</p>
+                                    <p>
+                                        <a href="/files/jquery-classypicozu.zip" class="btn btn-primary">
+                                            <i class="fa fa-folder-open"></i> Download it
+                                        </a>
+                                    </p>
+                                    <div class="alert alert-info">
+                                        <h4><i class="fa fa-info-circle"></i> License</h4>
+                                        This jQuery plugin is distributed under the <a href="https://vox.space/LICENSE-MIT">MIT license</a>. Enjoy!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="block">
+                                <div class="block-title">
+                                    <h2>Demo</h2>
+                                </div>
+                                <div class="clearfix">
+                                    <a href="http://www.aheartisaspade.com/images//2010/12/duffy.jpg" class="btn btn-success picozu">
+                                        <i class="fa fa-folder-open"></i> Picozu Demo
+                                    </a>
+                                    <script>
+                                        $(document).ready(function() {
+                                            $('.picozu').ClassyPicozu({
+                                                key: 'Ci8Mh5lIdX1Me3kB'
+                                            });
+                                        });
+                                    </script>
+                                    <br /><br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="block">
+                                <div class="block-title">
+                                    <h2>Setup</h2>
+                                </div>
+                                <div class="clearfix">
+                                    <p>Make sure you <a href="https://www.picozu.com/developers/applications/new/">register a Picozu API key</a>, which will be tied to your domain.</p>
+                                    <p>First you need to include the jQuery library, since ClassyPicozu is a plugin. You can download it from the jQuery website or link it directly from the Google CDN.</p>
+                                    <pre>&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"&gt;&lt;/script&gt;</pre>
+                                    <p>Secondly, you need to include the jQuery ClassyPicozu javascript and stylesheet file, which you can do it by adding the code below to your page.</p>
+                                    <pre>&lt;script src="js/jquery.classypicozu.min.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" type="text/css" href="css/jquery.classypicozu.min.css" /&gt;</pre>
+                                    <p>Next, you create an anchor element on which you want to trigger the Picozu Editor. Make sure the <em>href</em> attribute points to the image you want to load into Picozu.</p>
+                                    <pre>&lt;a href="http://www.yourdomain.com/yourimage.jpg" class="picozu"&gt;&lt;/a&gt;</pre>
+                                    <p>As the last step, you trigger the plugin on the element you just created. In this case, we trigger it on the element with the class <em>picozu</em>. Fill in correctly <a href="https://www.picozu.com/developers/applications/">your Picozu API key</a>.</p>
+                                    <pre>$('.picozu').ClassyPicozu({
+    key: 'YOUR_PICOZU_API_KEY'
+});</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="block">
+                                <div class="block-title">
+                                    <h2>Options</h2>
+                                </div>
+                                <div class="clearfix">
+                                    <ul class="fa-ul">
+                                        <li>
+                                            <h3>Parameters</h3>
+                                            <hr />
+                                        </li>
+                                        <li>
+                                            <span class="label label-danger">width</span> - width of the Picozu Editor window in pixels, default is <span class="label label-primary">1100</span>
+                                        </li>
+                                        <li>
+                                            <span class="label label-danger">height</span> - height of the Picozu Editor window in pixels, default is <span class="label label-primary">768</span>
+                                        </li>
+                                        <li>
+                                            <span class="label label-danger">move</span> - whether to move the modal window when you scroll the page, default is <span class="label label-primary">true</span>
+                                        </li>
+                                        <li>
+                                            <span class="label label-danger">key</span> - your Picozu API key, default is <span class="label label-primary">null</span>
+                                        </li>
+                                        <li>
+                                            <span class="label label-danger">image</span> - the plugin loads the image specified in the anchor's <em>href</em> attribute, but you can override it with the image parameter, default is <span class="label label-primary">null</span>
+                                        </li>
+                                        <li>
+                                            <span class="label label-danger">workspace</span> - defines the Picozu workspace, where <span class="label label-success">0</span> is minimal, <span class="label label-success">1</span> is the default one, <span class="label label-success">2</span> is educational and <span class="label label-success">3</span> is kids, default is <span class="label label-primary">1</span>
+                                        </li>
+                                        <li>
+                                            <span class="label label-danger">theme</span> - defines the Picozu theme, can be <span class="label label-success">default</span>, <span class="label label-success">galaxy</span> or <span class="label label-success">kids</span>, default is <span class="label label-primary">default</span>
+                                        </li>
+                                        <li>
+                                            <h3>Callbacks</h3>
+                                            <hr />
+                                        </li>
+                                        <li>
+                                            <span class="label label-danger">onOpen</span> - callback function to be called when the modal window opens
+                                        </li>
+                                        <li>
+                                            <span class="label label-danger">onClose</span> - callback function to be called when the modal window closes
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="block">
+                                <div class="block-title">
+                                    <h2>Example</h2>
+                                </div>
+                                <div class="clearfix">
+                                    <pre>&lt;button class="picozu"&gt;&lt;/button&gt;</pre>
+                                    <pre>$('.picozu').ClassyPicozu({
+    key: 'YOUR_PICOZU_API_KEY',
+    image: 'http://www.yourdomain.com/image1.jpg',
+    width: 900,
+    height: 600,
+    theme: 'galaxy',
+    workspace: 2
+});</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="clearfix">
+                    <div class="pull-right">
+                        <span>2005 - 2016</span> © <a href="https://vox.space" target="_blank">vox.SPACE</a>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
